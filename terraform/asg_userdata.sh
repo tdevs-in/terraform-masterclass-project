@@ -39,7 +39,7 @@ apt-get install python3-dev default-libmysqlclient-dev build-essential -y
 # Clone the app
 cd /
 git clone https://github.com/rajudevops2015/tdevs-p.git
-cd /tedevs-p
+cd /tdevs-p
 
 # Populate App with environmental variables
 echo "MYSQL_ROOT_PASSWORD=$PASSWORD" > .env
