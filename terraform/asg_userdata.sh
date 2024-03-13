@@ -38,12 +38,12 @@ apt-get install python3-dev default-libmysqlclient-dev build-essential -y
 
 # Clone the app
 cd /
-git clone https://github.com/rajudevops2015/tdevs-p.git
-cd /tdevs-p
+git clone https://github.com/tdevs-in/terraform-masterclass-project.git
+cd /terraform-masterclass-project
 
 # Populate App with environmental variables
 echo "MYSQL_ROOT_PASSWORD=$PASSWORD" > .env
-cd /tdevs-p/application
+cd /terraform-masterclass-project/application
 echo "MYSQL_DB=$DB" > .env
 echo "MYSQL_HOST=$HOST" >> .env
 echo "MYSQL_USER=$USER" >> .env
@@ -63,10 +63,10 @@ chmod +x ./install
 ./install auto
 
 # Run Flask Application
-cp /tdevs-p/newsread.service /etc/systemd/system/newsread.service
+cp /terraform-masterclass-project/newsread.service /etc/systemd/system/newsread.service
 systemctl daemon-reload
 systemctl enable newsread
-pip install -r /tdevs-p/requirements.txt
+pip install -r /terraform-masterclass-project/requirements.txt
 systemctl start newsread
 
 # Install CloudWatch Agent
